@@ -9,6 +9,11 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "hello";
+        return "welshcorgi";
+    }
+
+    @GetMapping("/welsh")
+    public String welsh() {
+        return "welsh bab jo";
     }
 }
