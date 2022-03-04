@@ -1,4 +1,4 @@
-package com.aixenhuh.portfolio.core.security;
+package com.aixenhuh.portfolio.common.security;
 
 public interface AuthToken<T> {
     boolean validate();

@@ -1,6 +1,6 @@
 package com.aixenhuh.portfolio.exception;
 
-import com.aixenhuh.portfolio.core.response.CommonResponse;
+import com.aixenhuh.portfolio.common.response.CommonResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -55,4 +55,5 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(response, HttpStatus.UNAUTHORIZED);
     }
+
 }

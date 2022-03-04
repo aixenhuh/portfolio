@@ -1,4 +1,4 @@
-package com.aixenhuh.portfolio.core.user;
+package com.aixenhuh.portfolio.user;
 
 public enum Role {
     ROLE_ADMIN, ROLE_USER

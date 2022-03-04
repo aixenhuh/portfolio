@@ -1,8 +1,8 @@
 package com.aixenhuh.portfolio.config;
 
-import com.aixenhuh.portfolio.core.security.JwtAuthToken;
-import com.aixenhuh.portfolio.core.security.JwtAuthTokenProvider;
-import com.aixenhuh.portfolio.core.security.Role;
+import com.aixenhuh.portfolio.common.security.JwtAuthToken;
+import com.aixenhuh.portfolio.common.security.JwtAuthTokenProvider;
+import com.aixenhuh.portfolio.common.security.SecurityRole;
 import com.aixenhuh.portfolio.exception.CustomAuthenticationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -27,17 +27,12 @@ public class AuthInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest servletRequest, HttpServletResponse servletResponse, Object handler)
             throws Exception {
 
-        log.info("preHandle!!");
-
         Optional<String> token = resolveToken(servletRequest);
-
 
         if (token.isPresent()) {
             JwtAuthToken jwtAuthToken = jwtAuthTokenProvider.convertAuthToken(token.get());
 
-            System.out.println(Role.USER.getCode());
-            System.out.println(jwtAuthToken.getData().get("role"));
-            if(jwtAuthToken.validate() & Role.USER.getCode().equals(jwtAuthToken.getData().get("role"))) {
+            if(jwtAuthToken.validate() & SecurityRole.USER.getCode().equals(jwtAuthToken.getData().get("role"))) {
                 return true;
             }
             else {

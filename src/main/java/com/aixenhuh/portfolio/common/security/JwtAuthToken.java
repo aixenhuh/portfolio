@@ -1,4 +1,4 @@
-package com.aixenhuh.portfolio.core.security;
+package com.aixenhuh.portfolio.common.security;
 
 import com.aixenhuh.portfolio.exception.CustomJwtRuntimeException;
 import io.jsonwebtoken.*;

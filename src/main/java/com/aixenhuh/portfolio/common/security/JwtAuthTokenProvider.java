@@ -1,4 +1,4 @@
-package com.aixenhuh.portfolio.core.security;
+package com.aixenhuh.portfolio.common.security;
 
 import io.jsonwebtoken.security.Keys;
 import lombok.extern.slf4j.Slf4j;

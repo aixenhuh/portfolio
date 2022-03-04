@@ -1,6 +1,6 @@
 package com.aixenhuh.portfolio.config;
 
-import com.aixenhuh.portfolio.core.security.JwtAuthTokenProvider;
+import com.aixenhuh.portfolio.common.security.JwtAuthTokenProvider;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
