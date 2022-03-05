@@ -12,7 +12,7 @@
     <artifactId>portfolio</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>portfolio</name>
+    <name>portfolio10</name>
     <description>portfolio</description>
     <properties>
         <java.version>8</java.version>
