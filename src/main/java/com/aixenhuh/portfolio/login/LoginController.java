@@ -47,7 +47,7 @@ public class LoginController {
         }
     }
 
-    @PostMapping(path="/singIn")
+    @PostMapping(path="/signIn")
     public ResponseEntity<CommonResponse> signIn(@RequestBody UserDTO userDto) {
         String s = loginService.signIn(userDto);
         return new ResponseEntity<>(HttpStatus.OK);
